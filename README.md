@@ -11,4 +11,4 @@ This is a Python file that monitors the status of tasks and allows the status to
 
 #Using The File Once installed and running the user will be greeted with a login screen asking for a username and password. If the file has not been used before these are admin and password respectively. Once the user has succesfully logged in they will be freeted with a set of choices, as follows:
 
-![Menu Screen](MenuJPG.png)
+![Menu Screen](MenuJPG.PNG)
