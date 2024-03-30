@@ -29,7 +29,7 @@ The other inputs follow the same pattern and allow the records of the functions 
 
 The file has text inputs and outputs and is used via the terminal window, in the developer's case in VS Code. Although the text presentation could have been improved with ANSI codes this was not done only because time did not allow. A typical input and output screen is shown below.
 
-![Typical Screenshot] (New_username.PNG)
+![Typical Screenshot](New_username.PNG)
 
 
 
