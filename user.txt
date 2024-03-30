@@ -1,0 +1,6 @@
+admin;password
+cedric;pass
+steve;pass
+mike;newpass
+fred;word
+joe;joe
