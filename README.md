@@ -4,17 +4,22 @@ Task Manager
 This is a Python file that monitors the status of tasks and allows the status to updated and new ones to be added. It is password protected and allows users to make and change certain records and allows admin only to make certain changes. It records certain reports to disk for later retreival.
 
 # Contents
-[Installation](#Installation)
-Objectives
+[Installation](#installation)  
+[Objectives](#objectives)  
+
 Using The File
 Methodology
 Functions
 Checking Input Validity
 Reading And Writing To File
 File Operations
-Text Reports
-Conclusion
+Text Reports  
 
+-[Conclusion]((#item-one))  
+
+
+
+<a name="installation"></a>
 # Installation 
 The file is available from <a href="https://github.com/CedricLittman/finalCapstone.git">Github</a>. Download the Python file and, provided there is a current copy of Python on the computer, it will run without any further additions.
 
@@ -116,6 +121,7 @@ User_overview.txt will have the following format:
 
 These text files are written so that they are in the same directory as the task manager file.
 
+<a id="item-one"></a>
 # Conclusion
 The task manager file included in this directory effectively records and stores data pertinent to a list of tasks and, depending on the user allows this information to be edited. If the ansi.py file is also included the terminal out put is more appealing.
 The file also enables statistical reports to be generated and these can both be displayed in the terminal and stored in a text file.
