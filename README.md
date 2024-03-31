@@ -60,4 +60,4 @@ The next, tasks.txt, contained the following information for each task:
 - Whether or not the task has been completed
 This file is read under various circumstances including the following. When the user wishes to see the tasks recorded by the programme and the information it contains about each one and when the user wishes to know various facts such as whether a task has been completed. It is read to control what the user can do. For example the user cannot change who the task was assigned to after it has been completed, presumably to prevent someone from taking the credit for the work of others. Before the user assigened to a task can be changed, therefore, the file is read to check if it has been completed. It is read to allow statistics to be calculated to be presented to the viewer.
 
-It is also written to 
+It is also written to when the user enters a new task and when details of a task are changed such as its description
