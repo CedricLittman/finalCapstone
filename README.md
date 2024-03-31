@@ -4,7 +4,7 @@ Task Manager
 This is a Python file that monitors the status of tasks and allows the status to updated and new ones to be added. It is password protected and allows users to make and change certain records and allows admin only to make certain changes. It records certain reports to disk for later retreival.
 
 # Contents
-[Installation]9#Installation)
+[Installation](#Installation)
 Objectives
 Using The File
 Methodology
