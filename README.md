@@ -121,7 +121,7 @@ User_overview.txt will have the following format:
 
 These text files are written so that they are in the same directory as the task manager file.
 
-<a id="conclusion"></a>
+<a href="#conclusion">
 # Conclusion
 The task manager file included in this directory effectively records and stores data pertinent to a list of tasks and, depending on the user allows this information to be edited. If the ansi.py file is also included the terminal out put is more appealing.
 The file also enables statistical reports to be generated and these can both be displayed in the terminal and stored in a text file.
