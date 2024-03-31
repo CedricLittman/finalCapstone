@@ -9,7 +9,7 @@ This is a Python file that monitors the status of tasks and allows the status to
 -[Using The File](#using-the-file)  
 -[Methodology](#methodology)  
 -[Functions](#functions) 
- -[Checking Input Validity](#checking-input-validity)  
+-[Checking Input Validity](#checking-input-validity)  
 -[Reading And Writing To File](#reading-and-writing-to-file)  
 -[File Operations](#file-operations)  
 -[Text Reports](#text-reports)  
