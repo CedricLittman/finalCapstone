@@ -4,18 +4,16 @@ Task Manager
 This is a Python file that monitors the status of tasks and allows the status to updated and new ones to be added. It is password protected and allows users to make and change certain records and allows admin only to make certain changes. It records certain reports to disk for later retreival.
 
 # Contents
-[Installation](#installation)  
-[Objectives](#objectives)  
-
-Using The File
-Methodology
-Functions
-Checking Input Validity
-Reading And Writing To File
-File Operations
-Text Reports  
-
--[Conclusion](#conclusion))  
+-[Installation](#installation)  
+-[Objectives](#objectives)  
+-[Using The File](#using-the-file)  
+-{Methodology](#methodology)  
+-[Functions](#functions)
+-[Checking Input Validity](#checking-input-validity)  
+-[Reading And Writing To File](#reading-and-writing-to-file)  
+-[File Operations](#file-operations)  
+-[Text Reports](#text-reports)    
+-[Conclusion](#conclusion)  
 
 
 
@@ -25,9 +23,11 @@ The file is available from <a href="https://github.com/CedricLittman/finalCapsto
 
 To improve the look of the output in the terminal window ANSI codes are imported. For this to be possible the file ansi.py must be installed in the same directory. The file is available in the same Github repo as the task manager file.
 
+<a name="objectives"></a>
 # Objectives 
 The task manager file was a HyperionDev bootcamp exercise and the objective was to refactor a file to make it DRYer, in other words reduce code repetition, and increase and improve its functionality. The file is written in Pytgon and, although it does include some imports, they do not require any pip installations.
 
+<a name="using-the-file"></a>
 # Using The File 
 Once installed and running the user will be greeted with a login screen asking for a username and password. If the file has not been used before these are admin and password respectively. Once the user has succesfully logged in they will be greeted with a set of choices, as follows if the ansi.py file is not included:
 
@@ -57,9 +57,11 @@ The file has text inputs and outputs and is used via the terminal window, in the
 
 ![Typical Screenshot](New_username.PNG)
 
+<a name="methodology"></a>
 # Methodology
 We were given a Python file which did not contain any functions making the code harder to follow and that did not effect all of the options contained in the menu. We were required to use functions to divide the various jobs the task manager effected and to reduce code repetition. We were also required to complete the code so it was able to fully effect all the options offered in the menu. The original file we were given is also available <a href="https://github.com/CedricLittman/finalCapstone/blob/main/original_task_manager%20(1).py">from this Github link</a>.
 
+<a name="functions"></a>
 # Functions
 The code was divided into functions using the following methodology.
 After the user has successfully logged in initially a menu function is called which presents the user with the various jobs the programme can do. Choosing any of the options, except for ds, will itself call a function. As the function should only complete one task it would call further functions if it required information to be processed further. Some of the functions may contain some repetition of code such as reading and writing to the text files and, if this is the case, these jobs will be allocated to further functions, but time did not permit. This is definitely a modification that will be explored in future development of the file.
@@ -68,9 +70,11 @@ Some of the functions generated their own menus and two different methodologies 
 
 The other methodology was to test the input for validity and, if the input was invalid, the function called itself recursively. Although recursive functions are not always well regarded no problems are anticipated with this use as the user is unlikely to make an invalid entry more than two or three times so the risk of a stack overflow is vanishingly small.
 
+<a name="checking-input-validity"></a>
 # Checking Input Validity
 Valid inputs were restricted to simple to check ones such as a letter or two or a digit as these are very easy to check using conditional statements. In another project the programmer decided to check the validity of more complicated inputs using regular expressions but such a level of complication was not thought to be necessary for this project where simple inputs did not require any reduction in functionality.
 
+<a name="reading-and-writing-to-file"></a>
 # Reading And Writing To File
 The programme read from and wrote to four different text files. One text, user.txt, file consisted on user names and passwords which was checked when the user logged in. When a new user was added thir details were added to the file.
 The next, tasks.txt, contained the following information for each task:
@@ -85,6 +89,7 @@ This file is read under various circumstances including the following. When the 
 
 The file is also written to when the user enters a new task and when details of a task are changed such as its description.
 
+<a name="file-operations"></a>
 # File Operations
 Once logged in the user can register a new user, as discussed, add a task and view all tasks. More functionality is included in the "vm" (View Mine) option which allows the user to view their  tasks.
 The vm allows the user access to the following functionality:
@@ -93,6 +98,7 @@ The vm allows the user access to the following functionality:
 - If the user selects a specific task, then they are able to choose to either mark the task as complete or edit the task.
 - If the user chooses to mark a task as complete, the ‘Yes’/’No’ value that describes whether the task has been completed or is changed to ‘Yes’ in the tasks.txt file and if the user chooses to edit a task, the username of the person to whom the task is assigned or the due date of the task is changed in tasks.txt. The task can only be edited if it has not yet been completed.
 
+<a name="text-reports"></a>
 # Text Reports
 When the user chooses to generate reports, two text files, called task_overview.txt and user_overview.txt are generated. Both these text files output data so that it is easy to read.
 task_overview.txt contains:
