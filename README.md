@@ -8,11 +8,13 @@ This is a Python file that monitors the status of tasks and allows the status to
 # Installation 
 The file is available from <a href="https://github.com/CedricLittman/finalCapstone.git">Github</a>. Download the Python file and, provided there is a current copy of Python on the computer, it will run without any further additions.
 
+To improve the look of the output in the terminal window ANSI codes are imported. For this to be possible the file ansi.py must be installed in the same directory. The file is available in the same Github repo as the task manager file.
+
 # Objectives 
 The task manager file was a HyperionDev bootcamp exercise and the objective was to refactor a file to make it DRYer, in other words reduce code repetition, and increase and improve its functionality. The file is written in Pytgon and, although it does include some imports, they do not require any pip installations.
 
 # Using The File 
-Once installed and running the user will be greeted with a login screen asking for a username and password. If the file has not been used before these are admin and password respectively. Once the user has succesfully logged in they will be freeted with a set of choices, as follows:
+Once installed and running the user will be greeted with a login screen asking for a username and password. If the file has not been used before these are admin and password respectively. Once the user has succesfully logged in they will be greeted with a set of choices, as follows if the ansi.py file is not included:
 
 ![Menu Screen](MenuJPG.PNG)
 
@@ -25,6 +27,11 @@ vm - View my task
 gr - Generate reports  
 ds - Display statistics  
 e - exit  
+
+If the ansi.py file is in the same directory the output will look like this:
+
+![Menue Screen With ANSI file](Ansi_menu.JPG)
+
 
 When one selects Register a user one is invited to enter a user name. If the username is already registered task manager tells the the user and prompts for another user name. Once the username has been entered the user is prompted to enter a password. One is required to enter the password twice to ensure it has been input correctly and if they are not the same the user is prompted for a new user name again.
 Throughout the programme all inputs are converted to lower case to reduce errors from user input and also checked for validity. If any invalid inputs are received the function calls itself recursively and the user starts again.
