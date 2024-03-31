@@ -4,6 +4,9 @@ Task Manager
 This is a Python file that monitors the status of tasks and allows the status to updated and new ones to be added. It is password protected and allows users to make and change certain records and allows admin only to make certain changes. It records certain reports to disk for later retreival.
 
 # Contents
+-Introduction  
+-[Conclusion](#conclusion)  
+
 
 # Installation 
 The file is available from <a href="https://github.com/CedricLittman/finalCapstone.git">Github</a>. Download the Python file and, provided there is a current copy of Python on the computer, it will run without any further additions.
@@ -48,6 +51,7 @@ The other methodology was to test the input for validity and, if the input was i
 # Checking Input Validity
 Valid inputs were restricted to simple to check ones such as a letter or two or a digit as these are very easy to check using conditional statements. In another project the programmer decided to check the validity of more complicated inputs using regular expressions but such a level of complication was not thought to be necessary for this project where simple inputs did not require any reduction in functionality.
 
+<a href="#conclusion">
 # Reading And Writing To File
 The programme read from and wrote to four different text files. One text, user.txt, file consisted on user names and passwords which was checked when the user logged in. When a new user was added thir details were added to the file.
 The next, tasks.txt, contained the following information for each task:
