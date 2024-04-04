@@ -53,10 +53,11 @@ import os
 from datetime import date
 from datetime import datetime
 
+# This allows dates to be compared
 DATETIME_STRING_FORMAT = "%Y-%m-%d"
 today_date = date.today()
 
-
+# Allows user to specify their requirement
 def menu()->None:
     """Called at start of programme to give user choice of functions.
     Made into a function as called repeatedly"""
@@ -110,6 +111,7 @@ def menu()->None:
             print("You have made a wrong choice, Please Try again")
 
 
+# Enables user to see the user report and have it written to file
 def user_report()->None:
     """Displays user report to the console and allows report to be written to a file"""
     users = []
@@ -152,6 +154,7 @@ def user_report()->None:
             print("Incomplete tasks (%): 0%")
             print("Overdue tasks (%): 0%")
     
+  
     # Ask if the user wants to write the report to a file
     while True:
         write_to_file = input("\nDo you want to write these results to a file? (Y/N) ").strip().lower()
@@ -168,6 +171,7 @@ def user_report()->None:
             print("Please enter 'Y' for yes or 'N' for no.")
     
 
+# Function that does the writing to file so can be reused keeping code DRY
 def write_user_report_to_file(users, user_stats)->None:
     """If user slects te user report is written to task_overview.txt in the same directory"""
     with open('user_overview.txt', 'w') as file:
@@ -186,6 +190,7 @@ def write_user_report_to_file(users, user_stats)->None:
                 file.write("Overdue tasks (%): 0%\n")
 
 
+# Might be possible to turn part that translates user number to global number as used elsewhere
 def mark_task_as_complete(task_number)->None:
     """This function translates the user's task number to the numer it has in tasks.txt and marks it complete"""
     task_number = int(task_number)  
@@ -233,7 +238,7 @@ def mark_task_as_complete(task_number)->None:
 
     menu()
 
-
+# The tasks are in a list of dictionaries
 def change_description(task_number)->None:
     """Allows user to change the description of the task in tasks.txt file"""
     task_number = int(task_number)
@@ -290,6 +295,7 @@ def change_description(task_number)->None:
     menu()
       
 
+# Opens user text file and adds a user and password, checks user not already registered and writes new user list to file
 def reg_user()->None:
     """Allows input of a new username"""
     new_username = input("New Username: ")
@@ -333,6 +339,7 @@ def reg_user()->None:
             reg_user()
 
 
+# Adds a new task and concludes with break unlike other functions which conclude by calling menu function
 def add_task()->None:
     """Appends a new task to the task list by reading the task file, adding the correctly formatted
     new task and writing it to disk overwriting the old file"""
@@ -400,6 +407,7 @@ def add_task()->None:
         break  
 
 
+# Usernames have to be entered into a list of dictionaries
 def change_username(task_number)->None:
     """Allows user to change who a particular task is allocated to"""
     task_number = int(task_number)  # User's task index
@@ -459,6 +467,7 @@ def change_username(task_number)->None:
     menu()
 
 
+# Processes tasks text file enabling it to be displayed in the terminal
 def view_all()->None:             
             '''Reads the task from task.txt file and prints to the console in the 
            format of Output 2 presented in the task pdf (i.e. includes spacing
@@ -491,6 +500,7 @@ def view_all()->None:
                         print(disp_str)
                         
 
+# Took a lot of work. Allows certain parameters of tasks to be changed by clling functions
 def view_mine(task_list)->None:
     """Reads the task from task.txt file and prints to the console in the 
            format of Output 2 presented in the task pdf (i.e. includes spacing
@@ -555,6 +565,7 @@ def view_mine(task_list)->None:
             view_mine(task_list)
 
 
+# Perhaps part of this could be in a new function as user's task number is translated to global task number
 def change_due_date(task_number)->None:
     """Called from view_mine function if user wishes to change due date"""
     task_number = int(task_number)
@@ -608,7 +619,7 @@ def change_due_date(task_number)->None:
 
 
 
-
+# Called from another function to keep functions responsible for just one purpose
 def check_if_user_task_completed(task_number)->bool:
     """Check if a specific task for a user is marked as completed based on the user's task number and
     returns a Boolean value indicating whether the task is completed. This value is returned to
