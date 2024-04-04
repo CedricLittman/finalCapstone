@@ -52,6 +52,7 @@ Finally the menu function is called which allows the user to choose how they wis
 import os
 from datetime import date
 from datetime import datetime
+import ansi
 
 DATETIME_STRING_FORMAT = "%Y-%m-%d"
 today_date = date.today()
